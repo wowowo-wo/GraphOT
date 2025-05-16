@@ -1,6 +1,6 @@
 # GraphOT
 
-This package provides tools to solve primal and dual optimal transport problems on graphs, and to visualize transport flows.
+This package provides useful tools to treat optimal transport problems on graphs
 
 ## Usage
 
