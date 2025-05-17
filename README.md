@@ -5,15 +5,14 @@ This package provides useful tools to treat optimal transport problems on graphs
 ## Usage
 
 ```bash 
-from src.ot_solver import solver_primal_ot, solver_dual_ot
-from src.adj_to_dist import adj_to_dist
-from src.visualize import plot_graph_with_potentials, plot_graph_with_transport
+from ssolver import solver_primal_ot, solver_dual_ot
+from adj_to_dist import adj_to_dist
+from visualize import plot_graph_with_potentials, plot_graph_with_transport
 
-# Prepare your data: distributions mu, nu and cost matrix Cost
-# ...
+# Prepare your data: adjacency matrix, distributions mu, nu and cost matrix Cost
 
-P = solver_prime_ot(mu, nu, Cost)
-f, g = solve_dual_ot(mu, nu, Cost)
+P = solver_primal_ot(mu, nu, Cost)
+f, g = solver_dual_ot(mu, nu, Cost)
 
 print(f"Optimal transport plan (P):\n{P}\n")
 print(f"Kantorovich potential f:\n{f}\n")
